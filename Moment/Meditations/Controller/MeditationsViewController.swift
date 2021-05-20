@@ -14,7 +14,7 @@ class MeditationsViewController: UIViewController {
     @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
-        testLabel.text = "your meditations"
+        testLabel.text = "your meditations!"
     }
     
 }
