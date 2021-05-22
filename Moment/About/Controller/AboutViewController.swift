@@ -9,10 +9,8 @@ import Foundation
 import UIKit
 
 class AboutViewController: UIViewController {
-    
-    @IBOutlet weak var testLabel: UILabel!
-    
+        
     override func viewDidLoad() {
-        testLabel.text = "about"
+        
     }
 }

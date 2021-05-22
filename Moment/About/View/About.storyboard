@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nvy-Wz-tkG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zra-Z1-e2E">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About-->
+        <!--About Moment-->
         <scene sceneID="QeA-Pe-qbo">
             <objects>
                 <viewController id="Nvy-Wz-tkG" customClass="AboutViewController" customModule="Moment" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,26 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7J-1h-KOQ">
-                                <rect key="frame" x="186" y="352" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YpA-NA-0I6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vLj-So-af3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="P9k-t6-EU4"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VWa-Ut-8Le"/>
                         <color key="backgroundColor" red="0.84372530420000003" green="0.83862499410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="VWa-Ut-8Le" firstAttribute="bottom" secondItem="YpA-NA-0I6" secondAttribute="bottom" id="ArH-vB-ccg"/>
+                            <constraint firstItem="YpA-NA-0I6" firstAttribute="top" secondItem="VWa-Ut-8Le" secondAttribute="top" id="HnA-CU-x5p"/>
+                            <constraint firstItem="VWa-Ut-8Le" firstAttribute="trailing" secondItem="YpA-NA-0I6" secondAttribute="trailing" id="Rta-6L-I71"/>
+                            <constraint firstItem="YpA-NA-0I6" firstAttribute="leading" secondItem="VWa-Ut-8Le" secondAttribute="leading" id="y6K-yr-Qw0"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="info.circle.fill" catalog="system" id="Kw1-gg-kqQ"/>
+                    <navigationItem key="navigationItem" title="About Moment" id="8NS-96-zra"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="testLabel" destination="s7J-1h-KOQ" id="ra5-XC-oXm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyo-Fr-AH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="773"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="772.76785714285711"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="A1v-ch-OVA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zra-Z1-e2E" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="info.circle.fill" catalog="system" id="Kw1-gg-kqQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fgo-dC-a2r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nvy-Wz-tkG" kind="relationship" relationship="rootViewController" id="bTc-BL-7oN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vdd-2M-XY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534.78260869565224" y="772.76785714285711"/>
         </scene>
     </scenes>
     <resources>
