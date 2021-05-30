@@ -12,6 +12,8 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var view: UIView!
+    
     
     
     override init(frame: CGRect) {
@@ -23,7 +25,7 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-
+    
     func setupCell(with meditation: Meditation) {
         
         titleLabel.text = meditation.title
@@ -47,11 +49,17 @@ class MeditationCollectionViewCell: UICollectionViewCell {
         //set banner color
         var frame = self.bounds
         frame.origin.y = -frame.size.height * 0.65
-        let view = UIView(frame: frame)
-        view.backgroundColor = color
-        self.addSubview(view)
-        self.sendSubviewToBack(view)
+//        let view = UIView(frame: frame)
         
+        view.frame = frame
+        
+        view.accessibilityIdentifier = "hello"
+        view.backgroundColor = color
+        
+//        view.removeFromSuperview()
+        
+//        self.addSubview(view)
+        self.sendSubviewToBack(view)
         
         //format image
         iconImage.layer.cornerRadius = iconImage.bounds.size.width / 2
