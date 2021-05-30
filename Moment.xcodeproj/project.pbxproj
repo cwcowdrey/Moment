@@ -22,6 +22,7 @@
 		1F9202F22651D17900C30B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9202F02651D17900C30B9A /* LaunchScreen.storyboard */; };
 		1F9202FD2651D17900C30B9A /* MomentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9202FC2651D17900C30B9A /* MomentTests.swift */; };
 		1F9203082651D17900C30B9A /* MomentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9203072651D17900C30B9A /* MomentUITests.swift */; };
+		1FBDC295266400950066CAB5 /* MeditationCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDC294266400950066CAB5 /* MeditationCollectionViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		1F9203032651D17900C30B9A /* MomentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9203072651D17900C30B9A /* MomentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentUITests.swift; sourceTree = "<group>"; };
 		1F9203092651D17900C30B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FBDC294266400950066CAB5 /* MeditationCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCollectionViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				1F79A6D72655D8400029734A /* Meditations.storyboard */,
 				1F25F67926586E1F00B8076C /* MeditationCollectionViewCell.swift */,
+				1FBDC294266400950066CAB5 /* MeditationCollectionViewHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				1F9202E32651D17800C30B9A /* AppDelegate.swift in Sources */,
 				1F9202E52651D17800C30B9A /* SceneDelegate.swift in Sources */,
 				1F9202ED2651D17800C30B9A /* Moment.xcdatamodeld in Sources */,
+				1FBDC295266400950066CAB5 /* MeditationCollectionViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
