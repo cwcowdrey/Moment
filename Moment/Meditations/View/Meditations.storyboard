@@ -4,12 +4,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Meditations View Controller-->
+        <!--Meditations-->
         <scene sceneID="fsP-hv-KyR">
             <objects>
                 <viewController id="R2Q-z6-66W" customClass="MeditationsViewController" customModule="Moment" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,34 +18,47 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ULY-wI-Fof">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dg7-G5-hAe">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MeditationCollectionViewCell" id="ezN-Ka-aYj" customClass="MeditationCollectionViewCell" customModule="Moment" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
+                                        <rect key="frame" x="107" y="50" width="200" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JWE-9v-OLn">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qjB-hK-EeX">
+                                                    <rect key="frame" x="62.5" y="20.5" width="75" height="74"/>
+                                                    <color key="tintColor" red="0.85559600591659546" green="0.71306981161612737" blue="0.59247067807176568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="XU4-0U-CFg"/>
+                                                        <constraint firstAttribute="width" constant="75" id="hgu-Tf-Shy"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LQ-am-O80">
-                                                    <rect key="frame" x="43" y="53.5" width="42" height="21"/>
+                                                    <rect key="frame" x="79" y="105" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9LQ-am-O80" firstAttribute="centerY" secondItem="JWE-9v-OLn" secondAttribute="centerY" id="9w6-q3-aYG"/>
+                                                <constraint firstItem="qjB-hK-EeX" firstAttribute="centerX" secondItem="JWE-9v-OLn" secondAttribute="centerX" id="LxP-i2-p0Y"/>
                                                 <constraint firstItem="9LQ-am-O80" firstAttribute="centerX" secondItem="JWE-9v-OLn" secondAttribute="centerX" id="P0n-yu-RvE"/>
+                                                <constraint firstAttribute="bottom" secondItem="9LQ-am-O80" secondAttribute="bottom" constant="20" id="pqF-z4-w9R"/>
+                                                <constraint firstItem="9LQ-am-O80" firstAttribute="top" secondItem="qjB-hK-EeX" secondAttribute="bottom" constant="10" id="ptC-bs-bej"/>
+                                                <constraint firstItem="qjB-hK-EeX" firstAttribute="top" secondItem="JWE-9v-OLn" secondAttribute="top" constant="20" id="xtD-Kj-mGr"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.88196975180000003" green="0.90360970839999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="iconImage" destination="qjB-hK-EeX" id="DuH-3H-TE4"/>
                                             <outlet property="titleLabel" destination="9LQ-am-O80" id="sBI-KC-eY2"/>
                                         </connections>
                                     </collectionViewCell>
@@ -56,7 +68,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI2-Oe-ObY">
-                                            <rect key="frame" x="8" y="8" width="42" height="34"/>
+                                            <rect key="frame" x="23" y="8" width="42" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -65,7 +77,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="bI2-Oe-ObY" secondAttribute="bottom" id="Pea-0g-h9l"/>
                                         <constraint firstItem="bI2-Oe-ObY" firstAttribute="top" secondItem="AoT-FN-BdV" secondAttribute="topMargin" id="S3j-I8-Pf1"/>
-                                        <constraint firstItem="bI2-Oe-ObY" firstAttribute="leading" secondItem="AoT-FN-BdV" secondAttribute="leadingMargin" id="Zq3-eV-gDj"/>
+                                        <constraint firstItem="bI2-Oe-ObY" firstAttribute="leading" secondItem="AoT-FN-BdV" secondAttribute="leadingMargin" constant="15" id="Zq3-eV-gDj"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="headerLabel" destination="bI2-Oe-ObY" id="Ckm-Wo-BD0"/>
@@ -82,7 +94,7 @@
                             <constraint firstItem="ULY-wI-Fof" firstAttribute="top" secondItem="Jrz-VY-3ut" secondAttribute="top" id="wcd-Pj-8Fn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AeT-J1-k7u"/>
+                    <navigationItem key="navigationItem" title="Meditations" id="AeT-J1-k7u"/>
                     <connections>
                         <outlet property="collectionView" destination="ULY-wI-Fof" id="sfv-pg-nJS"/>
                     </connections>
@@ -114,8 +126,6 @@
     </scenes>
     <resources>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="moon.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
