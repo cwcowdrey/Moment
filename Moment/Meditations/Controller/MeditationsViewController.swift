@@ -10,12 +10,12 @@ import UIKit
 
 class MeditationsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var meditations = [[Meditation(title: "B 1", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 2", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 3", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 4", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 5", type: .breathing, instructions: "do it", description: "breath ok just do it")], [Meditation(title: "M 1", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 2", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 3", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 4", type: .mantra, instructions: "do it", description: "breath ok just do it")], [Meditation(title: "N 1", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 2", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 3", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 4", type: .nirvana, instructions: "do it", description: "breath ok just do it")]]
+    var meditations = [[Meditation(title: "Box Breathing", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "5-3-1-1", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "Slow Breath", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 4", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 5", type: .breathing, instructions: "do it", description: "breath ok just do it")], [Meditation(title: "M 1", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 2", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 3", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 4", type: .mantra, instructions: "do it", description: "breath ok just do it")], [Meditation(title: "N 1", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 2", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 3", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 4", type: .nirvana, instructions: "do it", description: "breath ok just do it")]]
     
     
     //    private let spacing:CGFloat = 16.0
     
-    let margin: CGFloat = 10.0
+    let margin: CGFloat = 15.0
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -86,8 +86,9 @@ extension MeditationsViewController: UICollectionViewDelegateFlowLayout {
             + flowLayout.sectionInset.right
             + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
         
-        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
-        return CGSize(width: size, height: size)
+//        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+        let size = (collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow)
+        return CGSize(width: size, height: size * 1.10)
     }
     
     

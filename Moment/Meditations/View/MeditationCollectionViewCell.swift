@@ -13,6 +13,7 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var tryItButton: UIButton!
     
     
     
@@ -47,13 +48,13 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     func styleCell(color: UIColor) {
         
         //set banner color
-        var frame = self.bounds
-        frame.origin.y = -frame.size.height * 0.65
+//        var frame = self.bounds
+//        frame.origin.y = -frame.size.height * 0.65
 //        let view = UIView(frame: frame)
         
-        view.frame = frame
+//        view.frame = frame
         
-        view.accessibilityIdentifier = "hello"
+//        view.accessibilityIdentifier = "hello"
         view.backgroundColor = color
         
 //        view.removeFromSuperview()
@@ -72,6 +73,12 @@ class MeditationCollectionViewCell: UICollectionViewCell {
         self.layer.borderColor = color.cgColor
         self.layer.cornerRadius = 20.0
         self.clipsToBounds = true
+        
+        // style the button
+        tryItButton.layer.borderWidth = 2.0
+        tryItButton.layer.borderColor = color.cgColor
+        tryItButton.layer.cornerRadius = 10.0
+        tryItButton.clipsToBounds = true
         
         
     }
