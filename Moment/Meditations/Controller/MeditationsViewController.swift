@@ -12,9 +12,6 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
     
     var meditations = [[Meditation(title: "Box Breathing", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "5-3-1-1", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "Slow Breath", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 4", type: .breathing, instructions: "do it", description: "breath ok just do it"), Meditation(title: "B 5", type: .breathing, instructions: "do it", description: "breath ok just do it")], [Meditation(title: "M 1", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 2", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 3", type: .mantra, instructions: "do it", description: "breath ok just do it"), Meditation(title: "M 4", type: .mantra, instructions: "do it", description: "breath ok just do it")], [Meditation(title: "N 1", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 2", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 3", type: .nirvana, instructions: "do it", description: "breath ok just do it"), Meditation(title: "N 4", type: .nirvana, instructions: "do it", description: "breath ok just do it")]]
     
-    
-    //    private let spacing:CGFloat = 16.0
-    
     let margin: CGFloat = 15.0
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -80,7 +77,8 @@ extension MeditationsViewController: UICollectionViewDelegateFlowLayout {
         flowLayout.minimumLineSpacing = margin
         flowLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
         
-        let noOfCellsInRow = 2   //number of column you want
+        // number of columns
+        let noOfCellsInRow = 2
         
         let totalSpace = flowLayout.sectionInset.left
             + flowLayout.sectionInset.right
@@ -93,20 +91,3 @@ extension MeditationsViewController: UICollectionViewDelegateFlowLayout {
     
     
 }
-
-
-//extension MeditationsViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let numberOfItemsPerRow:CGFloat = 3
-//        let spacingBetweenCells:CGFloat = 16
-//
-//        let totalSpacing = (2 * self.spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells) //Amount of total spacing in a row
-//
-//        if let collection = self.collectionView{
-//            let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
-//            return CGSize(width: width, height: width)
-//        }else{
-//            return CGSize(width: 0, height: 0)
-//        }
-//    }
-//}

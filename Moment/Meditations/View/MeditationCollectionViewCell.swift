@@ -47,19 +47,9 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     
     func styleCell(color: UIColor) {
         
-        //set banner color
-//        var frame = self.bounds
-//        frame.origin.y = -frame.size.height * 0.65
-//        let view = UIView(frame: frame)
-        
-//        view.frame = frame
-        
-//        view.accessibilityIdentifier = "hello"
+        // set banner color
         view.backgroundColor = color
-        
-//        view.removeFromSuperview()
-        
-//        self.addSubview(view)
+    
         self.sendSubviewToBack(view)
         
         //format image
@@ -79,8 +69,6 @@ class MeditationCollectionViewCell: UICollectionViewCell {
         tryItButton.layer.borderColor = color.cgColor
         tryItButton.layer.cornerRadius = 10.0
         tryItButton.clipsToBounds = true
-        
-        
     }
     
     
