@@ -118,11 +118,46 @@
                     <navigationItem key="navigationItem" title="Meditations" id="AeT-J1-k7u"/>
                     <connections>
                         <outlet property="collectionView" destination="ULY-wI-Fof" id="sfv-pg-nJS"/>
+                        <segue destination="Jbl-nm-CTd" kind="presentation" identifier="showMeditationDetails" id="Lsr-7q-WwD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7r-ma-Hiq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-329" y="899"/>
+        </scene>
+        <!--Meditation Details View Controller-->
+        <scene sceneID="ji5-HU-Z2b">
+            <objects>
+                <viewController id="Jbl-nm-CTd" customClass="MeditationDetailsViewController" customModule="Moment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAZ-I3-kMH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THy-LK-Egy">
+                                <rect key="frame" x="107" y="393.5" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="laG-ZG-f97"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9rE-wN-bif"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="THy-LK-Egy" firstAttribute="centerY" secondItem="9rE-wN-bif" secondAttribute="centerY" id="50O-a4-eN3"/>
+                            <constraint firstItem="THy-LK-Egy" firstAttribute="centerX" secondItem="9rE-wN-bif" secondAttribute="centerX" id="57W-zZ-woC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bwe-rS-xXh"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="THy-LK-Egy" id="cLY-FF-pgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmE-0U-Z8z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="899"/>
         </scene>
         <!--Meditations-->
         <scene sceneID="wLO-Zv-8lo">
@@ -150,6 +185,9 @@
         <image name="moon.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

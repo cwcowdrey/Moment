@@ -16,6 +16,8 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var selectedMeditation: Meditation?
+    
     override func viewDidLoad() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -59,7 +61,18 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMeditationDetails" {
+            guard let vc = segue.destination as? MeditationDetailsViewController else { return }
+            
+            vc.meditation = selectedMeditation
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedMeditation = meditations[indexPath.section][indexPath.row]
+        self.performSegue(withIdentifier: "showMeditationDetails", sender: self)
+        
         print(meditations[indexPath.section][indexPath.row].title)
     }
     
