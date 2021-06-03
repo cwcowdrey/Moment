@@ -25,4 +25,8 @@ class Meditation {
         self.instructions = instructions
         self.description = description
     }
+    
+    convenience init() {
+        self.init(title: "String", type: .breathing, instructions: "String", description: "String")
+    }
 }

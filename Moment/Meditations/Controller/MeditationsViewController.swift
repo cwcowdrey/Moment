@@ -16,7 +16,7 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var selectedMeditation: Meditation?
+    var selectedMeditation = Meditation()
     
     override func viewDidLoad() {
         collectionView.delegate = self
