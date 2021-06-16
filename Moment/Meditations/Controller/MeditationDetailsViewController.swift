@@ -12,18 +12,37 @@ class MeditationDetailsViewController: UIViewController {
     
     var meditation = Meditation()
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bannerImage: UIImageView!
     
+    
+    @IBOutlet weak var timeHeaderLabel: UILabel!
+    @IBOutlet weak var timeValueLabel: UILabel!
+    
+    @IBOutlet weak var positionHeaderLabel: UILabel!
+    @IBOutlet weak var positionValueLabel: UILabel!
+    
+    @IBOutlet weak var materialsHeaderLabel: UILabel!
+    @IBOutlet weak var materialsValueLabel: UILabel!
+    
+    
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        titleLabel.text = meditation.title
-        
+                
         setupNavBar()
+        setupMeditationInfo()
     }
     
     func setupNavBar() {
         self.title = "How to Do \(meditation.title)"
+    }
+    
+    
+    func setupMeditationInfo() {
+        timeValueLabel.text = meditation.time
+        positionValueLabel.text = meditation.position
+        materialsValueLabel.text = meditation.materials
     }
     
 }
