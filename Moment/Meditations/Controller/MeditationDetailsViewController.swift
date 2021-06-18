@@ -14,6 +14,7 @@ class MeditationDetailsViewController: UIViewController {
     
     @IBOutlet weak var bannerImage: UIImageView!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var timeHeaderLabel: UILabel!
     @IBOutlet weak var timeValueLabel: UILabel!
@@ -43,6 +44,8 @@ class MeditationDetailsViewController: UIViewController {
         timeValueLabel.text = meditation.time
         positionValueLabel.text = meditation.position
         materialsValueLabel.text = meditation.materials
+        
+        descriptionLabel.text = meditation.description
     }
     
 }
