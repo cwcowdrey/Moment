@@ -16,6 +16,10 @@ class MeditationDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var bannerImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
+    
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -44,20 +48,19 @@ class MeditationDetailsViewController: UIViewController {
         setupNavBar()
         setupMeditationInfo()
         
-        mainStackView.setCustomSpacing(5, after: infoStackView)
+        mainStackView.setCustomSpacing(10, after: infoStackView)
         mainStackView.setCustomSpacing(10, after: instructionsHeader)
         
-        infoStackView.layer.borderWidth = 2
-        infoStackView.layer.borderColor = UIColor.lightGray.cgColor
+        infoStackView.addBottomBorderWithColor(color: UIColor.init(hexString: "E1E4E9"), width: 2)
         
-        bannerImage.layer.borderWidth = 2
-        bannerImage.layer.borderColor = UIColor.lightGray.cgColor
+        titleLabel.text = meditation.title
         
-//        infoStackView.addBottomBorderWithColor(color: .lightGray, width: 2)
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     func setupNavBar() {
-        self.title = "How to Do \(meditation.title)"
+        self.title = "Meditation Details"
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     

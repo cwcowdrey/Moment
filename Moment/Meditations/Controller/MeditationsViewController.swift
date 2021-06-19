@@ -25,6 +25,14 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         switch kind {
