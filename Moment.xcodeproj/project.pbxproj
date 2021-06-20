@@ -11,6 +11,7 @@
 		1F25F6732657167200B8076C /* MeditationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25F6722657167200B8076C /* MeditationsViewController.swift */; };
 		1F25F6782657171A00B8076C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25F6772657171A00B8076C /* AboutViewController.swift */; };
 		1F25F67A26586E1F00B8076C /* MeditationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25F67926586E1F00B8076C /* MeditationCollectionViewCell.swift */; };
+		1F6B66932668308B0051D2F3 /* MeditationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B66922668308B0051D2F3 /* MeditationDetailsViewController.swift */; };
 		1F79A6D82655D8400029734A /* Meditations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F79A6D72655D8400029734A /* Meditations.storyboard */; };
 		1F79A6DA2655D84D0029734A /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F79A6D92655D84D0029734A /* About.storyboard */; };
 		1F9202E32651D17800C30B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9202E22651D17800C30B9A /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		1F25F6722657167200B8076C /* MeditationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsViewController.swift; sourceTree = "<group>"; };
 		1F25F6772657171A00B8076C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		1F25F67926586E1F00B8076C /* MeditationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F6B66922668308B0051D2F3 /* MeditationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailsViewController.swift; sourceTree = "<group>"; };
 		1F79A6D72655D8400029734A /* Meditations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Meditations.storyboard; sourceTree = "<group>"; };
 		1F79A6D92655D84D0029734A /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		1F9202DF2651D17800C30B9A /* Moment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1F25F6722657167200B8076C /* MeditationsViewController.swift */,
+				1F6B66922668308B0051D2F3 /* MeditationDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				1F25F67A26586E1F00B8076C /* MeditationCollectionViewCell.swift in Sources */,
 				1F9202E72651D17800C30B9A /* ViewController.swift in Sources */,
 				1F25F6782657171A00B8076C /* AboutViewController.swift in Sources */,
+				1F6B66932668308B0051D2F3 /* MeditationDetailsViewController.swift in Sources */,
 				1F9202E32651D17800C30B9A /* AppDelegate.swift in Sources */,
 				1F9202E52651D17800C30B9A /* SceneDelegate.swift in Sources */,
 				1F9202ED2651D17800C30B9A /* Moment.xcdatamodeld in Sources */,
