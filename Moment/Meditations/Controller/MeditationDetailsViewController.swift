@@ -38,7 +38,7 @@ class MeditationDetailsViewController: UIViewController {
         mainStackView.setCustomSpacing(10, after: infoStackView)
         mainStackView.setCustomSpacing(10, after: instructionsHeader)
         
-        infoStackView.addBottomBorderWithColor(color: UIColor.init(hexString: "E1E4E9"), width: 2)
+        infoStackView.addBottomBorderWithColor(color: UIColor.init(hex: "E1E4E9", alpha: 1), width: 2)
     }
     
     func setupNavBar() {
@@ -46,7 +46,6 @@ class MeditationDetailsViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationController?.navigationBar.tintColor = .white
     }
-    
     
     func setupMeditationInfo() {
         titleLabel.text = meditation.title
@@ -62,12 +61,11 @@ class MeditationDetailsViewController: UIViewController {
     
 }
 
-
 extension UIView {
     func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
+        border.frame = CGRect(x: 0, y: self.frame.size.height, width: UIScreen.main.bounds.width - 20, height: width)
         self.layer.addSublayer(border)
     }
 }
