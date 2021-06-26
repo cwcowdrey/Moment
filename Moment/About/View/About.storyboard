@@ -48,22 +48,22 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I3F-zX-7EC">
                                                 <rect key="frame" x="25" y="226.5" width="364" height="96"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8He-xH-e4V">
-                                                        <rect key="frame" x="0.0" y="0.5" width="96" height="95"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="relaxing" translatesAutoresizingMaskIntoConstraints="NO" id="8He-xH-e4V">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="96" id="UCs-is-AEH"/>
                                                             <constraint firstAttribute="width" constant="96" id="iRd-PA-DhX"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E80-kz-Jzs">
-                                                        <rect key="frame" x="134" y="0.5" width="96" height="95"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="energy" translatesAutoresizingMaskIntoConstraints="NO" id="E80-kz-Jzs">
+                                                        <rect key="frame" x="134" y="0.0" width="96" height="96"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="96" id="37G-5h-gsU"/>
                                                             <constraint firstAttribute="height" constant="96" id="Q4u-NL-vlX"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O6o-AF-5ev">
-                                                        <rect key="frame" x="268" y="0.5" width="96" height="95"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleeping" translatesAutoresizingMaskIntoConstraints="NO" id="O6o-AF-5ev">
+                                                        <rect key="frame" x="268" y="0.0" width="96" height="96"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="96" id="O6a-Ip-6m4"/>
                                                             <constraint firstAttribute="width" constant="96" id="n2p-gt-gFT"/>
@@ -134,8 +134,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="energy" width="160" height="160"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="sun.min" catalog="system" width="128" height="121"/>
-        <image name="sun.min.fill" catalog="system" width="128" height="121"/>
+        <image name="relaxing" width="160" height="160"/>
+        <image name="sleeping" width="160" height="160"/>
     </resources>
 </document>

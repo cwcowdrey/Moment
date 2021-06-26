@@ -28,7 +28,7 @@ class AboutViewController: UIViewController {
         descriptionLabel.text = "Moment is a meditation app that's a little different than most of the other meditation apps you might find out there. Most noticably, our meditations are not guided. At Moment, we believe peace can only truly be found during times of quiet and solitude. These are the time when we can authentically be ourselves and when the most learning can occur."
         
         
-        benefitsLabel.attributedText = bulletPointList(strings: ["Increased self confidence", "better happy life", "better decision making"])
+        benefitsLabel.attributedText = bulletPointList(strings: ["Feel more relaxed", "Increased natural energy", "Better restful sleep"])
     }
     
     func bulletPointList(strings: [String]) -> NSAttributedString {
