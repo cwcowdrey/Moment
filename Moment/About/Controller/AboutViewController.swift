@@ -15,6 +15,7 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var benefitsHeader: UILabel!
     @IBOutlet weak var benefitsLabel: UILabel!
+    @IBOutlet weak var taglineLabel: UILabel!
     
     
         
@@ -29,6 +30,8 @@ class AboutViewController: UIViewController {
         
         
         benefitsLabel.attributedText = bulletPointList(strings: ["Feel more relaxed", "Increased natural energy", "Better restful sleep"])
+        
+        taglineLabel.text = "this moment is so beautiful. please live in the moment and you will be happy, this is how it goes. I promise you \n - Mother Teresa"
     }
     
     func bulletPointList(strings: [String]) -> NSAttributedString {

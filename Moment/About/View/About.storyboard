@@ -19,9 +19,9 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JOc-pS-TXP">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="330.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="371"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Moment?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvB-9P-Yqx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Moment?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvB-9P-Yqx">
                                                 <rect key="frame" x="25" y="25" width="364" height="45.5"/>
                                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="35"/>
                                                 <nil key="textColor"/>
@@ -71,6 +71,12 @@
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuH-dS-hij">
+                                                <rect key="frame" x="25" y="342.5" width="364" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="25" left="25" bottom="8" right="25"/>
                                     </stackView>
@@ -103,6 +109,7 @@
                         <outlet property="descriptionLabel" destination="uOd-17-ebT" id="kCk-tJ-KDd"/>
                         <outlet property="headerLabel" destination="BvB-9P-Yqx" id="EK2-B8-ngm"/>
                         <outlet property="mainStackView" destination="JOc-pS-TXP" id="MGy-jM-aZ2"/>
+                        <outlet property="taglineLabel" destination="ZuH-dS-hij" id="CBd-SJ-9NJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyo-Fr-AH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
