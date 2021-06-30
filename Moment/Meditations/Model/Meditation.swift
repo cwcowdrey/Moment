@@ -18,9 +18,9 @@ class Meditation {
     var materials: String
     
     enum Category: String {
-        case mantra
-        case breathing
-        case nirvana
+        case mantra = "Mantra"
+        case breathing = "Breathing"
+        case nirvana = "Nirvana"
     }
     
     init(title: String, type: Category, instructions: String, description: String, time: String, position: String, materials: String) {

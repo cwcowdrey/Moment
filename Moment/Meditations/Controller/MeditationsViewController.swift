@@ -42,7 +42,7 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
             }
             
             let headerText = meditations[indexPath.section][indexPath.row].type.rawValue
-            headerView.headerLabel.text = headerText
+            headerView.headerLabel.text = "\(headerText) Meditations"
             return headerView
             
         default:
