@@ -29,8 +29,6 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -49,7 +47,6 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
             assert(false, "invalid element")
         }
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return meditations[section].count
@@ -83,31 +80,28 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
         
         print(meditations[indexPath.section][indexPath.row].title)
     }
-    
-    
 }
-
 
 extension MeditationsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        
-        flowLayout.minimumInteritemSpacing = margin
-        flowLayout.minimumLineSpacing = margin
-        flowLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
-        
-        // number of columns
-        let noOfCellsInRow = 2
-        
-        let totalSpace = flowLayout.sectionInset.left
-            + flowLayout.sectionInset.right
-            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
-        
-//        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
-        let size = (collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow)
-        return CGSize(width: size, height: size * 1.10)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let noOfCellsInRow = 3
+            let totalSpace = margin + margin + margin * CGFloat(noOfCellsInRow - 1)
+            let size = (collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow)
+            return CGSize(width: size, height: 250)
+        } else {
+            let noOfCellsInRow = 2
+            
+            let totalSpace = margin + margin + margin * CGFloat(noOfCellsInRow - 1)
+            let size = (collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow)
+            return CGSize(width: size, height: 185)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     }
     
     
