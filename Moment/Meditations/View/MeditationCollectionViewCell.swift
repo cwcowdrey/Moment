@@ -32,7 +32,7 @@ class MeditationCollectionViewCell: UICollectionViewCell {
         switch meditation.type {
         case .breathing:
             self.backgroundColor = .white
-            styleCell(color: UIColor.init(hex: "#e5e1ee", alpha: 1))
+            styleCell(color: UIColor.init(hex: "#FE9D9D", alpha: 1))
         case .mantra:
             self.backgroundColor = .white
             styleCell(color: UIColor.init(hex: "#68edc6", alpha: 1))
