@@ -28,16 +28,14 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     func setupCell(with meditation: Meditation) {
         
         titleLabel.text = meditation.title
+        self.backgroundColor = .white
         
         switch meditation.type {
         case .breathing:
-            self.backgroundColor = .white
-            styleCell(color: UIColor.init(hex: "#e5e1ee", alpha: 1))
-        case .mantra:
-            self.backgroundColor = .white
             styleCell(color: UIColor.init(hex: "#68edc6", alpha: 1))
+        case .mantra:
+            styleCell(color: UIColor.init(hex: "#8E8FDD", alpha: 1))
         case .nirvana:
-            self.backgroundColor = .white
             styleCell(color: UIColor.init(hex: "#90bede", alpha: 1))
         }
     }
