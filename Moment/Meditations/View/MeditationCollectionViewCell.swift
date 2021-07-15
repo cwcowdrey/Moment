@@ -35,7 +35,7 @@ class MeditationCollectionViewCell: UICollectionViewCell {
             styleCell(color: UIColor.init(hex: "#68edc6", alpha: 1))
         case .mantra:
             styleCell(color: UIColor.init(hex: "#8E8FDD", alpha: 1))
-        case .nirvana:
+        case .body:
             styleCell(color: UIColor.init(hex: "#90bede", alpha: 1))
         }
     }

@@ -20,7 +20,7 @@ class Meditation {
     enum Category: String {
         case mantra = "Mantra"
         case breathing = "Breathing"
-        case nirvana = "Nirvana"
+        case body = "Body"
     }
     
     init(title: String, type: Category, instructions: String, description: String, time: String, position: String, materials: String) {
