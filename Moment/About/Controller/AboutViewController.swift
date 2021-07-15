@@ -37,8 +37,6 @@ class AboutViewController: UIViewController {
     func bulletPointList(strings: [String]) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.headIndent = 15
-//        paragraphStyle.minimumLineHeight = 22
-//        paragraphStyle.maximumLineHeight = 22
         paragraphStyle.tabStops = [NSTextTab(textAlignment: .left, location: 15)]
 
         let stringAttributes = [
