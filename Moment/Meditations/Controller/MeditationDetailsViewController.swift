@@ -54,7 +54,7 @@ class MeditationDetailsViewController: UIViewController {
         positionValueLabel.text = meditation.position
         materialsValueLabel.text = meditation.materials
         
-        descriptionLabel.text = meditation.description
+        descriptionLabel.text = "Happy meditating!"
         
         instructionsLabel.text = meditation.instructions
     }

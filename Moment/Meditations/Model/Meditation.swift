@@ -9,7 +9,6 @@ import Foundation
 
 class Meditation {
     var title: String
-    var description: String
     var type: Category
     var instructions: String
     
@@ -23,17 +22,16 @@ class Meditation {
         case body = "Body"
     }
     
-    init(title: String, type: Category, instructions: String, description: String, time: String, position: String, materials: String) {
+    init(title: String, type: Category, instructions: String, time: String, position: String, materials: String) {
         self.title = title
         self.type = type
         self.instructions = instructions
-        self.description = description
         self.time = time
         self.position = position
         self.materials = materials
     }
     
     convenience init() {
-        self.init(title: "String", type: .breathing, instructions: "String", description: "String", time: "String", position: "String", materials: "String")
+        self.init(title: "String", type: .breathing, instructions: "String", time: "String", position: "String", materials: "String")
     }
 }
