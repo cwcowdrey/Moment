@@ -17,8 +17,6 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var benefitsLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     
-    
-        
     override func viewDidLoad() {
         setText()
     }
@@ -27,7 +25,6 @@ class AboutViewController: UIViewController {
         headerLabel.text = "What is Moment?"
 
         descriptionLabel.text = "Moment is a meditation app that's a little different than most of the other meditation apps you might find out there. Most noticably, our meditations are not guided. At Moment, we believe peace can only truly be found during times of quiet and solitude. These are the times when we can authentically be ourselves and when the most learning can occur."
-        
         
         benefitsLabel.attributedText = bulletPointList(strings: ["Feel more relaxed", "Increased natural energy", "Better restful sleep"])
         

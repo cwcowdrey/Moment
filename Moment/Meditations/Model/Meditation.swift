@@ -32,6 +32,6 @@ class Meditation {
     }
     
     convenience init() {
-        self.init(title: "String", type: .breathing, instructions: "String", time: "String", position: "String", materials: "String")
+        self.init(title: "title", type: .breathing, instructions: "instructions", time: "time", position: "position", materials: "materials")
     }
 }
