@@ -27,6 +27,15 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     
     func setupCell(with meditation: Meditation) {
         
+        switch meditation.type {
+        case .mantra:
+            iconImage.image = UIImage(named: "mantra")
+        case .breathing:
+            iconImage.image = UIImage(named: "breathing")
+        case .body:
+            iconImage.image = UIImage(named: "body")
+        }
+        
         titleLabel.text = meditation.title
         self.backgroundColor = .white
         

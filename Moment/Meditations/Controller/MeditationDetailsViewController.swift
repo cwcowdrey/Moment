@@ -25,6 +25,9 @@ class MeditationDetailsViewController: UIViewController {
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var instructionsHeader: UILabel!
     @IBOutlet weak var infoStackView: UIStackView!
+    
+    @IBOutlet weak var bannerImageHeightConstraint: NSLayoutConstraint!
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,11 @@ class MeditationDetailsViewController: UIViewController {
         setupNavBar()
         setupMeditationInfo()
         styleStackViews()
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            bannerImageHeightConstraint.constant = 350
+        }
+
     }
     
     func styleStackViews() {
