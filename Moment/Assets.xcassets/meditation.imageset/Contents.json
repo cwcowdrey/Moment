@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mediation.jpeg",
+      "filename" : "AdobeStock_332462611.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "AdobeStock_332462611@2x.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "AdobeStock_332462611@3x.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -321,6 +321,7 @@
                     <navigationItem key="navigationItem" title="Meditation Details" id="bwe-rS-xXh"/>
                     <connections>
                         <outlet property="bannerImage" destination="XUL-oU-ARt" id="S9k-HU-Zvx"/>
+                        <outlet property="bannerImageHeightConstraint" destination="B43-JS-9dF" id="iVK-4s-Yww"/>
                         <outlet property="descriptionLabel" destination="Mb5-89-ekN" id="j5c-jU-FNX"/>
                         <outlet property="infoStackView" destination="nKb-PT-5aV" id="4Fa-qY-Xhh"/>
                         <outlet property="instructionsHeader" destination="Y1i-81-haa" id="T5j-rU-ahU"/>
@@ -370,7 +371,7 @@
     <resources>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="meditation" width="1400" height="875"/>
+        <image name="meditation" width="1741" height="957"/>
         <image name="moon.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
