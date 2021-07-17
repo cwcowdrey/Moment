@@ -37,7 +37,6 @@ class MeditationDetailsViewController: UIViewController {
     func styleStackViews() {
         mainStackView.setCustomSpacing(10, after: infoStackView)
         mainStackView.setCustomSpacing(10, after: instructionsHeader)
-        
         infoStackView.addBottomBorderWithColor(color: UIColor.init(hex: "E1E4E9", alpha: 1), width: 2)
     }
     
@@ -49,16 +48,12 @@ class MeditationDetailsViewController: UIViewController {
     
     func setupMeditationInfo() {
         titleLabel.text = meditation.title
-        
         timeValueLabel.text = meditation.time
         positionValueLabel.text = meditation.position
         materialsValueLabel.text = meditation.materials
-        
-        descriptionLabel.text = meditation.description
-        
+        descriptionLabel.text = "Happy meditating!"
         instructionsLabel.text = meditation.instructions
     }
-    
 }
 
 extension UIView {

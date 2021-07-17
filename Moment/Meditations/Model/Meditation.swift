@@ -9,7 +9,6 @@ import Foundation
 
 class Meditation {
     var title: String
-    var description: String
     var type: Category
     var instructions: String
     
@@ -20,20 +19,19 @@ class Meditation {
     enum Category: String {
         case mantra = "Mantra"
         case breathing = "Breathing"
-        case nirvana = "Nirvana"
+        case body = "Body"
     }
     
-    init(title: String, type: Category, instructions: String, description: String, time: String, position: String, materials: String) {
+    init(title: String, type: Category, instructions: String, time: String, position: String, materials: String) {
         self.title = title
         self.type = type
         self.instructions = instructions
-        self.description = description
         self.time = time
         self.position = position
         self.materials = materials
     }
     
     convenience init() {
-        self.init(title: "String", type: .breathing, instructions: "String", description: "String", time: "String", position: "String", materials: "String")
+        self.init(title: "title", type: .breathing, instructions: "instructions", time: "time", position: "position", materials: "materials")
     }
 }
