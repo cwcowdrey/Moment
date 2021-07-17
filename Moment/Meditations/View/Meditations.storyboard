@@ -318,9 +318,7 @@
                             <constraint firstItem="of8-gB-CT7" firstAttribute="leading" secondItem="9rE-wN-bif" secondAttribute="leading" id="YyV-ap-GFH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Meditation Details" id="bwe-rS-xXh">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="SDc-UT-Gb4"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Meditation Details" id="bwe-rS-xXh"/>
                     <connections>
                         <outlet property="bannerImage" destination="XUL-oU-ARt" id="S9k-HU-Zvx"/>
                         <outlet property="descriptionLabel" destination="Mb5-89-ekN" id="j5c-jU-FNX"/>
