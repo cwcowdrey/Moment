@@ -27,19 +27,13 @@ class MeditationCollectionViewCell: UICollectionViewCell {
     
     func setupCell(with meditation: Meditation) {
         
-        switch meditation.type {
-        case .mantra:
-            iconImage.image = UIImage(named: "mantra")
-        case .breathing:
-            iconImage.image = UIImage(named: "breathing")
-        case .body:
-            iconImage.image = UIImage(named: "body")
-        }
+        
+        iconImage.image = UIImage(named: meditation.type.rawValue)
         
         titleLabel.text = meditation.title
         self.backgroundColor = .white
         
-        switch meditation.type {
+        switch meditation.category {
         case .breathing:
             styleCell(color: UIColor.init(hex: "#68edc6", alpha: 1))
         case .mantra:
@@ -57,9 +51,9 @@ class MeditationCollectionViewCell: UICollectionViewCell {
         self.sendSubviewToBack(view)
         
         //format image
-        iconImage.layer.cornerRadius = iconImage.bounds.size.width / 2
+        iconImage.layer.cornerRadius = iconImage.bounds.size.width / 4
         iconImage.clipsToBounds = true
-        iconImage.layer.borderWidth = 4.0
+        iconImage.layer.borderWidth = 3.0
         iconImage.layer.borderColor = color.cgColor
         
         // style the border
