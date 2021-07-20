@@ -44,7 +44,7 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
             return headerView
             
         default:
-            assert(false, "invalid element")
+            return UICollectionReusableView()
         }
     }
     
