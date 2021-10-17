@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1E14572708FD3C0073D206 /* MeditationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E14562708FD3C0073D206 /* MeditationDataManager.swift */; };
 		1F25F6702657154D00B8076C /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25F66F2657154D00B8076C /* Meditation.swift */; };
 		1F25F6732657167200B8076C /* MeditationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25F6722657167200B8076C /* MeditationsViewController.swift */; };
 		1F25F6782657171A00B8076C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25F6772657171A00B8076C /* AboutViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1E14562708FD3C0073D206 /* MeditationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDataManager.swift; sourceTree = "<group>"; };
 		1F25F66F2657154D00B8076C /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		1F25F6722657167200B8076C /* MeditationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsViewController.swift; sourceTree = "<group>"; };
 		1F25F6772657171A00B8076C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1F25F66F2657154D00B8076C /* Meditation.swift */,
+				1F1E14562708FD3C0073D206 /* MeditationDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,9 +125,9 @@
 		1F79A6D32655D7D10029734A /* Meditations */ = {
 			isa = PBXGroup;
 			children = (
-				1F25F6712657161C00B8076C /* Controller */,
 				1F25F66E2657153D00B8076C /* Model */,
 				1F79A6D52655D8160029734A /* View */,
+				1F25F6712657161C00B8076C /* Controller */,
 			);
 			path = Meditations;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			files = (
 				1F25F6702657154D00B8076C /* Meditation.swift in Sources */,
 				1F25F6732657167200B8076C /* MeditationsViewController.swift in Sources */,
+				1F1E14572708FD3C0073D206 /* MeditationDataManager.swift in Sources */,
 				1F25F67A26586E1F00B8076C /* MeditationCollectionViewCell.swift in Sources */,
 				1F9202E72651D17800C30B9A /* ViewController.swift in Sources */,
 				1F25F6782657171A00B8076C /* AboutViewController.swift in Sources */,
