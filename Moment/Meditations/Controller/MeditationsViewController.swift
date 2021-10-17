@@ -8,48 +8,43 @@
 import Foundation
 import UIKit
 
-class MeditationsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MeditationsViewController: UIViewController {
     
     var meditations = [[Meditation]]()
-    
+    var selectedMeditation = Meditation()
     var meditationManager = MeditationDataManager()
-    
     let margin: CGFloat = 15.0
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var selectedMeditation = Meditation()
-    
     override func viewDidLoad() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         navigationController?.navigationBar.prefersLargeTitles = true
-        
         meditations = meditationManager.getMeditations()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        switch kind {
-        case UICollectionView.elementKindSectionHeader:
-            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MeditationCollectionViewHeader", for: indexPath) as? MeditationCollectionViewHeader else {
-                fatalError()
-            }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMeditationDetails" {
+            guard let vc = segue.destination as? MeditationDetailsViewController else { return }
             
-            let headerText = meditations[indexPath.section][indexPath.row].category.rawValue
-            headerView.headerLabel.text = "\(headerText) Meditations"
-            return headerView
-            
-        default:
-            return UICollectionReusableView()
+            vc.meditation = selectedMeditation
         }
+    }
+}
+
+
+// MARK: - Setup CollectionView Cells / Selection
+extension MeditationsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedMeditation = meditations[indexPath.section][indexPath.row]
+        self.performSegue(withIdentifier: "showMeditationDetails", sender: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -70,17 +65,21 @@ class MeditationsViewController: UIViewController, UICollectionViewDelegate, UIC
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMeditationDetails" {
-            guard let vc = segue.destination as? MeditationDetailsViewController else { return }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MeditationCollectionViewHeader", for: indexPath) as? MeditationCollectionViewHeader else {
+                fatalError()
+            }
             
-            vc.meditation = selectedMeditation
+            let headerText = meditations[indexPath.section][indexPath.row].category.rawValue
+            headerView.headerLabel.text = "\(headerText) Meditations"
+            return headerView
+            
+        default:
+            return UICollectionReusableView()
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedMeditation = meditations[indexPath.section][indexPath.row]
-        self.performSegue(withIdentifier: "showMeditationDetails", sender: self)
     }
 }
 
